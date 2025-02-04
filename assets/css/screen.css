@@ -108,17 +108,12 @@ hr {
 /* ---------------------------------------------------------- */
 
 .gh-head {
-    font-size: 1.6rem;
-    background-color: transparent;
     position: sticky;
     top: 0;
     z-index: 100;
-}
-
-.gh-head.is-scrolled {
-    background-color: var(--background-color);
-    border-bottom: 1px solid var(--color-border);
-    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    font-size: 1.6rem;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
 }
 
 .gh-head-logo {
@@ -726,7 +721,13 @@ hr {
 
 .gh-article-image {
     grid-column: 1 / span 12;
-    margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
+    margin: clamp(4rem, 3rem + 3.125vw, 8rem) auto 0;
+}
+
+@media (min-width: 992px) {
+    .gh-article-image {
+        max-width: 900px;
+    }
 }
 
 .gh-content {
