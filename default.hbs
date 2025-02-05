@@ -19,6 +19,9 @@
         }
     </style>
 
+    <!-- Add tocbot CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
+
     <script>
         /* The script for calculating the color contrast was taken from
         https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
@@ -103,6 +106,21 @@
 <script src="{{asset "built/main.min.js"}}"></script>
 
 {{ghost_foot}}
+
+<!-- Add tocbot script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
+<script>
+    // Initialize tocbot if we're on a page with a table of contents
+    if (document.querySelector('.toc')) {
+        tocbot.init({
+            tocSelector: '.toc',
+            contentSelector: '.gh-content',
+            headingSelector: 'h1, h2, h3',
+            hasInnerContainers: true,
+            collapseDepth: 6,
+        });
+    }
+</script>
 
 </body>
 
