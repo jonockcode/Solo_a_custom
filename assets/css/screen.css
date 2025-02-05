@@ -1011,7 +1011,9 @@ hr {
     font-weight: 700;
     color: var(--color-primary);
 }
-
+.is-active-link::before {
+    background-color: var(--ghost-accent-color) !important;
+}
 .toc-list .toc-list {
     padding-left: 2rem;
     margin-top: 0.8rem;

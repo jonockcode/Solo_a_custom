@@ -108,17 +108,26 @@
 {{ghost_foot}}
 
 <!-- Add tocbot script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.32.2/tocbot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
 <script>
     // Initialize tocbot if we're on a page with a table of contents
     if (document.querySelector('.toc')) {
-        tocbot.init({
-            tocSelector: '.toc',
-            contentSelector: '.gh-content',
-            headingSelector: 'h1, h2, h3',
-            hasInnerContainers: true,
-            collapseDepth: 6,
-        });
+        // Check if there are any headings in the content
+        const hasHeadings = document.querySelector('.gh-content').querySelectorAll('h1, h2, h3').length > 0;
+        const tocContainer = document.querySelector('.gh-toc');
+        
+        if (hasHeadings) {
+            tocbot.init({
+                tocSelector: '.toc',
+                contentSelector: '.gh-content',
+                headingSelector: 'h1, h2, h3',
+                hasInnerContainers: true,
+                collapseDepth: 6,
+            });
+        } else {
+            // Hide the TOC container if there are no headings
+            tocContainer.style.display = 'none';
+        }
     }
 </script>
 
