@@ -1037,7 +1037,7 @@ hr {
 @media (max-width: 767px) {
     .gh-subscribe-input {
         height: 40px;
-        padding: 0 6px 0 16px;
+        padding: 0 0px 0 16px;
         font-size: 1.5rem;
         margin-top: 32px;
     }
