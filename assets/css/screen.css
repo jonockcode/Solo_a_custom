@@ -885,10 +885,10 @@ hr {
     justify-content: space-between;
     width: 100%;
     max-width: 480px;
-    height: 52px;
-    padding: 0 8px 0 24px;
+    height: 44px;
+    padding: 0 8px 0 20px;
     margin-top: 40px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: var(--color-secondary-text);
     cursor: pointer;
     background-color: var(--color-border);
@@ -1030,5 +1030,15 @@ hr {
     
     .toc-list-item {
         font-size: 1.4rem;
+    }
+}
+
+/* Add responsive adjustments for mobile */
+@media (max-width: 767px) {
+    .gh-subscribe-input {
+        height: 40px;
+        padding: 0 6px 0 16px;
+        font-size: 1.5rem;
+        margin-top: 32px;
     }
 }
