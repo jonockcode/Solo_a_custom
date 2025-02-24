@@ -1042,3 +1042,89 @@ hr {
         margin-top: 32px;
     }
 }
+
+/* Form Styles
+/* ---------------------------------------------------------- */
+
+.fs-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.fs-field {
+    margin-bottom: 24px;
+}
+
+.fs-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-darker-gray);
+}
+
+.fs-input,
+.fs-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1.6rem;
+    font-family: var(--font-sans);
+    color: var(--color-darker-gray);
+    background-color: var(--color-lighter-gray);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.fs-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.fs-input:focus,
+.fs-textarea:focus {
+    outline: none;
+    border-color: var(--ghost-accent-color);
+}
+
+.fs-description {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    color: var(--color-secondary-text);
+}
+
+.fs-button-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+}
+
+.fs-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--ghost-accent-color);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.fs-button:hover {
+    opacity: 0.85;
+}
+
+/* Add responsive adjustments for mobile */
+@media (max-width: 767px) {
+    .fs-input,
+    .fs-textarea {
+        font-size: 1.5rem;
+        padding: 10px 14px;
+    }
+
+    .fs-button {
+        width: 100%;
+    }
+}
