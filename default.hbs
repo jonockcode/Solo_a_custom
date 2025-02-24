@@ -89,7 +89,7 @@
 
             <div class="gh-copyright">
                 {{#unless @custom.footer_text}}
-                    {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                    {{@site.title}} © {{date format="YYYY"}}. 
                 {{else}}
                     {{@custom.footer_text}}
                 {{/unless}}
@@ -129,6 +129,19 @@
             tocContainer.style.display = 'none';
         }
     }
+</script>
+
+<script>
+    // Handle external links to open in new tab
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentHost = window.location.hostname;
+        document.querySelectorAll('a').forEach(link => {
+            if (link.hostname && link.hostname !== currentHost && !link.hasAttribute('target')) {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+    });
 </script>
 
 </body>
