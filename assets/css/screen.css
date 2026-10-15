@@ -914,12 +914,36 @@ hr {
     margin-top: 40px;
     font-size: 1.6rem;
     color: var(--color-secondary-text);
-    cursor: pointer;
     background-color: var(--color-border);
     border-radius: 72px;
 }
 
+.gh-subscribe-input:focus-within {
+    outline: 2px solid var(--ghost-accent-color);
+    outline-offset: 3px;
+}
+
+.gh-subscribe-email {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    font: inherit;
+    color: var(--color-darker-gray);
+    background: transparent;
+    border: 0;
+    border-radius: inherit;
+    outline: none;
+}
+
+.gh-subscribe-email::placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
+
 .gh-subscribe-input .gh-btn {
+    flex-shrink: 0;
     font-weight: 700;
 }
 

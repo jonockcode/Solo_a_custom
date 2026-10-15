@@ -32,14 +32,12 @@
                 {{#if @custom.secondary_header}}
                     <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
                 {{/if}}
-                {{#if @site.members_enabled}}
-                    {{#unless @member}}
-                        <div class="gh-subscribe-input" data-portal>
-                            max@mail.ch
-                            <span class="gh-btn gh-primary-btn">{{t "Subscribe"}}</span>
-                        </div>
-                    {{/unless}}
-                {{/if}}
+                <form class="gh-subscribe-input listmonk-form" method="post" action="https://newsletter.adilkoller.ch/subscription/form" aria-label="Newsletter">
+                    <input type="hidden" name="nonce" value="">
+                    <input type="hidden" name="l" value="32fb746e-8409-4126-afea-27e34294d406">
+                    <input class="gh-subscribe-email" type="email" name="email" required autocomplete="email" placeholder="max@mail.ch" aria-label="E-Mail-Adresse">
+                    <button class="gh-btn gh-primary-btn" type="submit">Abonnieren</button>
+                </form>
             </div>
         </div>
     </div>
