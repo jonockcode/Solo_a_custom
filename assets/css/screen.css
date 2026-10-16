@@ -116,6 +116,23 @@ hr {
     backdrop-filter: blur(100px);
 }
 
+/* Match upstream's menu alignment until shared-theme-assets publishes the fix. */
+.gh-burger::before {
+    top: 10.5px;
+}
+
+.gh-burger::after {
+    bottom: 10.5px;
+}
+
+.is-head-open .gh-burger::before {
+    top: 14.5px;
+}
+
+.is-head-open .gh-burger::after {
+    bottom: 14.5px;
+}
+
 .gh-head-logo {
     font-weight: 800;
 }
