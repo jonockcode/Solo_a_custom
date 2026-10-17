@@ -14,6 +14,15 @@ Solo is a minimal theme for [Ghost](https://github.com/TryGhost/Ghost) focused o
 
 # Development
 
+### Artikel ohne Artikelbild
+
+Nach dem Hochladen und Aktivieren des Themes kann im Ghost-Editor unter
+**Beitragseinstellungen → Template** die Vorlage **Ohne Artikelbild** ausgewählt
+werden. Sie zeigt Titel, Auszug und Inhalt ohne das Artikelbild und dessen
+Bildunterschrift an. Das hinterlegte Artikelbild bleibt für die Artikelübersicht
+und Social-Media-Vorschauen verfügbar. Bilder im Artikelinhalt werden weiterhin
+angezeigt. Die Standardvorlage bleibt unverändert.
+
 Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [pnpm](https://pnpm.io/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
