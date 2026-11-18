@@ -1,0 +1,86 @@
+/* CleverReach form styles stay local to the homepage newsletter. */
+.cr-newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 40px;
+    font-family: inherit;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--color-darker-gray);
+}
+
+.cr-newsletter-form .cr-newsletter-honeypot {
+    display: none !important;
+}
+
+.cr-newsletter-names {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.cr-newsletter-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.cr-newsletter-field label {
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.cr-newsletter-field input {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 20px;
+    font: inherit;
+    color: inherit;
+    background-color: var(--color-border);
+    border: 0;
+    border-radius: 72px;
+}
+
+.cr-newsletter-form .gh-btn {
+    align-self: flex-start;
+    min-height: 44px;
+    padding: 0 24px;
+    font: inherit;
+    font-weight: 700;
+    border-radius: 72px;
+}
+
+.cr-newsletter-field input:focus-visible,
+.cr-newsletter-form button:focus-visible {
+    outline: 2px solid var(--ghost-accent-color);
+    outline-offset: 3px;
+}
+
+.has-background-about .cr-newsletter-form {
+    color: var(--color-white);
+}
+
+.has-background-about .cr-newsletter-field input {
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+.has-typographic-about .cr-newsletter-form {
+    margin-top: 48px;
+}
+
+@media (max-width: 767px) {
+    .cr-newsletter-names {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .cr-newsletter-form {
+        margin-top: 32px;
+    }
+}
