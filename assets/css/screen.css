@@ -247,7 +247,7 @@ hr {
 @media (max-width: 840px) {
     .has-side-about .gh-about-inner {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap: 64px;
     }
 }
