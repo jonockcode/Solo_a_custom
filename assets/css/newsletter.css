@@ -12,8 +12,15 @@
     color: var(--color-darker-gray);
 }
 
-.cr-newsletter-form .cr-newsletter-honeypot {
+.cr-newsletter-form .cr-newsletter-honeypot,
+.cr-newsletter-form [hidden] {
     display: none !important;
+}
+
+.cr-newsletter-step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .cr-newsletter-disclaimer {
@@ -60,6 +67,14 @@
     border-radius: 72px;
 }
 
+.cr-newsletter-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 4px;
+}
+
 .cr-newsletter-form .gh-btn {
     align-self: flex-start;
     min-height: 44px;
@@ -67,6 +82,21 @@
     font: inherit;
     font-weight: 700;
     border-radius: 72px;
+}
+
+.cr-newsletter-form .cr-newsletter-back {
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 10px;
+    color: inherit;
+    background: transparent;
+}
+
+.cr-newsletter-form .cr-newsletter-required {
+    margin: 0;
+    font-size: 1.2rem;
+    color: inherit;
+    opacity: 0.7;
 }
 
 .cr-newsletter-field input:focus-visible,
